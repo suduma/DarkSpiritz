@@ -150,7 +150,7 @@ try:
         print Command_exe("["+time.strftime('%H:%M:%S')+"] Installing paramiko.                                               ",'python -m pip install paramiko')
         print Command_exe("["+time.strftime('%H:%M:%S')+"] Installing scapy.                                                  ",'python -m pip install scapy')
         print Command_exe("["+time.strftime('%H:%M:%S')+"] Installing whois.                                                  ",'python -m pip install whois')
-        print Command_exe("["+time.strftime('%H:%M:%S')+"] Installing remaining modules..                                     ",'pip install -r requirements.txt'))
+        print Command_exe("["+time.strftime('%H:%M:%S')+"] Installing remaining modules..                                     ",'pip install -r requirements.txt')
         worked = True
         if worked == True:
             print "Installation completed successfully! Starting DarkSpiritz.."
