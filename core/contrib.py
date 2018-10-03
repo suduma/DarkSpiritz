@@ -8,3 +8,5 @@ def credits():
     print "-" * 50
     print "Ryan0x1                @Ryan0x1                 Maintainer/Creator"
     print "Macs                   M4cs                     Maintainer/Creator"
+    print "hargoniX               @hargoniX                Contributor"
+    print "                                                - Exploits/Dupalgeddon2"
