@@ -210,8 +210,9 @@ Plugin Category
 											if "core" not in d:
 												if "Resources" not in d:
 													if "storage" not in d:
-														if "modules" not in d:
-															print """ %s""" % (d)
+														if "CODE_OF_CONDUCT.md" not in d:
+															if "modules" not in d:
+																print """ %s""" % (d)
     print ""
 
 if __name__=='__main__':
