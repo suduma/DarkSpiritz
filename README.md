@@ -1,6 +1,6 @@
 ![alt text](https://travis-ci.com/DarkSpiritz/DarkSpiritz.svg?branch=master)
 
-# DarkSpiritz (Python 2)
+# DarkSpiritz (Python 2.x)
 A penetration testing framework for UNIX systems.
 
 # What is DarkSpiritz?
