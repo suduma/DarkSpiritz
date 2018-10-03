@@ -335,8 +335,8 @@ def main():
     warning("Shutting Down Web Server...")
     httpd.shutdown;
 
-bind_ip = ask.listener_address;
-listener_port = int(ask.listener_port)
+bind_ip = ask.LHOST;
+listener_port = int(ask.LPORT)
 
 
 global client_type;
