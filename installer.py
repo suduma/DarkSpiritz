@@ -91,8 +91,8 @@ if os.getuid() != 0:
 	exit(1)
 
 time.sleep(1)
-print Command_exe("["+time.strftime('%H:%M:%S')+"] Making python2 as default.                 ",'mv /usr/bin/python2 /usr/bin/python')
-print Command_exe("["+time.strftime('%H:%M:%S')+"] Fixing python3.                 ",'mv /usr/bin/python3 /usr/bin/python3')
+#print Command_exe("["+time.strftime('%H:%M:%S')+"] Making python2 as default.                 ",'mv /usr/bin/python2 /usr/bin/python')
+#print Command_exe("["+time.strftime('%H:%M:%S')+"] Fixing python3.                 ",'mv /usr/bin/python3 /usr/bin/python3')
 
 
 print colors.B   + """\n
