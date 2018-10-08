@@ -7,8 +7,6 @@ try:
 	df = "admin"
 	users = raw_input(success("Enter user [" + df + "]: ")) or df
 	passlist = raw_input(success("Enter passlist directory: "))
-	NET.CheckConnectionHost(ask.target,ask.LPORT,5)
-	Loadingfile(passlist)
 
 	with open(passlist,'r') as passwords:
 		for password in passwords:
