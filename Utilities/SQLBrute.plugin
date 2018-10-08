@@ -5,8 +5,8 @@ import MySQLdb
 
 try:
 	df = "admin"
-	users = raw_input(success("Enter user [" + df + "]: ")) or df
-	passlist = raw_input(success("Enter passlist directory: "))
+	users = raw_input("[.] Enter user [" + df + "]: ") or df
+	passlist = raw_input("[.] Enter passlist directory: ")
 
 	with open(passlist,'r') as passwords:
 		for password in passwords:
