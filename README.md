@@ -44,3 +44,4 @@ These are features that DarkSpiritz Team prides themself on based on this progra
 - Multi-functionality
 
 # Default Plugins:
+Shady is not aaron and is a big gay
