@@ -1,0 +1,12 @@
+#!/usr/bin/python
+Description = 'Open a telnet shell'
+
+from plugin_support import *
+import os, sys
+
+target = ask.target
+port = ask.RPORT
+
+command = 'telnet ' + target + " " + port
+text("Starting Telnet Connection With: " + target + ":" + port)
+os.system(command)

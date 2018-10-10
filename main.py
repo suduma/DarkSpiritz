@@ -139,7 +139,7 @@ def main():
                 about = line
                 with open(about, 'r') as myfile:
                     data = myfile.read().splitlines()
-                    desc = data[0]
+                    desc = data[1]
                     datar = desc.replace("Description = '", "")
                 x = datar.rstrip("'")
                 bb = line.split(terminal[5:] + '/')[1].split('.plugin')[0]

