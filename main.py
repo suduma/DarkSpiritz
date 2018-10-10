@@ -44,10 +44,16 @@ readline.set_completer_delims(' \t\n;')
 readline.parse_and_bind("tab: complete")
 readline.set_completer(complete)
 
+
+
 LOGS = "storage/logs"
 STORAGE = "storage"
 MODULES = "modules"
 CORE = "core"
+
+if not os.path.exists(LOGS):
+    os.makedirs(LOGS)
+
 CHECK_LOGS = os.path.exists(LOGS)
 CHECK_STORAGE = os.path.exists(STORAGE)
 CHECK_MODULES = os.path.exists(MODULES)
@@ -74,6 +80,9 @@ else:
 RescoursesDir = os.getcwd()
 dandtime = time.strftime("%d-%m-%Y-%H:%M:%S")
 logfile = "storage/logs/%s.log" % (dandtime)
+
+if not os.path.exists(LOGS):
+    os.makedirs(LOGS)
 
 if CHECK_LOGS == True:
     if os.path.exists("storage/logs/config.xml") == False:
